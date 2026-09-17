@@ -1,7 +1,14 @@
 public class Variables {
     public static void main(String[] args) {
-        String name="Rishabh";
-        int age=20;
-        System.out.print("My name is "+ name +", Age is "+ age);
+
+        int age = 20;
+        String name = "Rishabh";
+        double height = 5.8;
+        boolean isStudent = true;
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(height);
+        System.out.println(isStudent);
     }
 }
