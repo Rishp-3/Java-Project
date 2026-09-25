@@ -171,6 +171,3 @@ If this repository helped you, please give it a **star** ⭐ — it motivates me
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
