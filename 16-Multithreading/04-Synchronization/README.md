@@ -1,3 +1,5 @@
-# 04-Synchronization
+# Synchronization
 
-Write your notes, explanation, examples, and practice questions here.
+Preventing race conditions when multiple threads access shared data, using `synchronized` methods and blocks.
+
+See **`SynchronizationDemo.java`** in this folder for a complete, runnable example with explanatory comments.

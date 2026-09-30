@@ -1,3 +1,5 @@
-# 02-Two-Dimensional
+# Two-Dimensional Arrays
 
-Write your notes, explanation, examples, and practice questions here.
+An array of arrays, commonly used to represent grids, matrices, or tables of data.
+
+See **`TwoDimensional.java`** in this folder for a complete, runnable example with explanatory comments.

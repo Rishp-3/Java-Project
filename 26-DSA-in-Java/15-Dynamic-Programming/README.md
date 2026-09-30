@@ -1,3 +1,5 @@
-# 15-Dynamic-Programming
+# DSA: Dynamic Programming
 
-Write your notes, explanation, examples, and practice questions here.
+Breaking problems into overlapping subproblems and reusing results: memoized Fibonacci, 0/1 Knapsack, LCS, and coin change.
+
+See **`DynamicProgrammingDemo.java`** in this folder for a complete, runnable example with explanatory comments.

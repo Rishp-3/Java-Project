@@ -1,3 +1,5 @@
 # InputStream
 
-Write your notes, explanation, examples, and practice questions here.
+The base class for reading raw BYTE streams — used for binary data like images or any non-text file.
+
+See **`InputStreamDemo.java`** in this folder for a complete, runnable example with explanatory comments.

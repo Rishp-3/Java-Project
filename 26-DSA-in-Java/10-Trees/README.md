@@ -1,3 +1,5 @@
-# 10-Trees
+# DSA: Trees
 
-Write your notes, explanation, examples, and practice questions here.
+Binary tree traversals: in-order, pre-order, post-order (DFS) and level-order (BFS).
+
+See **`TreesDemo.java`** in this folder for a complete, runnable example with explanatory comments.

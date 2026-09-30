@@ -1,3 +1,5 @@
-# 02-Import
+# Import Statement
 
-Write your notes, explanation, examples, and practice questions here.
+How to bring classes from other packages into scope using `import`, including single-class and wildcard imports.
+
+See **`ImportDemo.java`** in this folder for a complete, runnable example with explanatory comments.

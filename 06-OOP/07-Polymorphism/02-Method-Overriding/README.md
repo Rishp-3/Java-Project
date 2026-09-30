@@ -1,3 +1,5 @@
-# 07-Polymorphism/02-Method-Overriding
+# Method Overriding (Polymorphism)
 
-Write your notes, explanation, examples, and practice questions here.
+Runtime polymorphism: a subclass provides its own implementation of a method already defined in its parent class.
+
+See **`OverridingDemo.java`** in this folder for a complete, runnable example with explanatory comments.

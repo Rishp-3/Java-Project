@@ -1,3 +1,5 @@
-# 01-One-Dimensional
+# One-Dimensional Arrays
 
-Write your notes, explanation, examples, and practice questions here.
+A fixed-size, ordered collection of elements of the same type, accessed by a zero-based index.
+
+See **`OneDimensional.java`** in this folder for a complete, runnable example with explanatory comments.

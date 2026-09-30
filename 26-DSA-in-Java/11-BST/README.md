@@ -1,3 +1,5 @@
-# 11-BST
+# DSA: Binary Search Tree
 
-Write your notes, explanation, examples, and practice questions here.
+A BST maintains sorted order (left < node < right), enabling fast insert, search, min, and max operations.
+
+See **`BSTDemo.java`** in this folder for a complete, runnable example with explanatory comments.

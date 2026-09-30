@@ -1,3 +1,5 @@
-# Singleton
+# Singleton Pattern
 
-Write your notes, explanation, examples, and practice questions here.
+Ensures a class has only one instance with a global access point, implemented with thread-safe double-checked locking.
+
+See **`SingletonPatternDemo.java`** in this folder for a complete, runnable example with explanatory comments.

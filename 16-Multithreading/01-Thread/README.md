@@ -1,3 +1,5 @@
-# 01-Thread
+# Thread Class
 
-Write your notes, explanation, examples, and practice questions here.
+Creating a thread by extending the `Thread` class and overriding `run()`.
+
+See **`ThreadDemo.java`** in this folder for a complete, runnable example with explanatory comments.

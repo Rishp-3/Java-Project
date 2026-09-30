@@ -1,3 +1,5 @@
-# 12-Heap
+# DSA: Heap
 
-Write your notes, explanation, examples, and practice questions here.
+Using `PriorityQueue` (a heap) to find the K largest elements and maintain a running median.
+
+See **`HeapDemo.java`** in this folder for a complete, runnable example with explanatory comments.

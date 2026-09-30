@@ -1,3 +1,5 @@
 # Reader
 
-Write your notes, explanation, examples, and practice questions here.
+The abstract base class for reading CHARACTER streams (text), extended by FileReader, StringReader, etc.
+
+See **`ReaderDemo.java`** in this folder for a complete, runnable example with explanatory comments.

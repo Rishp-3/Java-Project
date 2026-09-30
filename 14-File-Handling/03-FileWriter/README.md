@@ -1,3 +1,5 @@
-# 03-FileWriter
+# FileWriter
 
-Write your notes, explanation, examples, and practice questions here.
+Writes text to a file, either overwriting it or appending to the end.
+
+See **`FileWriterDemo.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 08-continue
+# Continue Statement
 
-Write your notes, explanation, examples, and practice questions here.
+Skips the rest of the current loop iteration and jumps to the next one, without exiting the loop entirely.
+
+See **`Continue.java`** in this folder for a complete, runnable example with explanatory comments.

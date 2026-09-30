@@ -1,3 +1,5 @@
-# 05-Encapsulation
+# Encapsulation
 
-Write your notes, explanation, examples, and practice questions here.
+Bundling data (fields) and behavior (methods) together while restricting direct access to fields using `private` and exposing them via getters/setters.
+
+See **`Encapsulation.java`** in this folder for a complete, runnable example with explanatory comments.

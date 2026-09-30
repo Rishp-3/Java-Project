@@ -1,3 +1,5 @@
-# 07-Polymorphism/01-Method-Overloading
+# Method Overloading (Polymorphism)
 
-Write your notes, explanation, examples, and practice questions here.
+Compile-time polymorphism: the compiler picks which overloaded method to call based on the arguments provided.
+
+See **`OverloadingDemo.java`** in this folder for a complete, runnable example with explanatory comments.

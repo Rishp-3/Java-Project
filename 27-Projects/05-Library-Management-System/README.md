@@ -1,3 +1,5 @@
-# 05-Library-Management-System
+# Project: Library Management System
 
-Write your notes, explanation, examples, and practice questions here.
+Add books, issue and return them, and search the catalog by title.
+
+See **`LibraryManagementSystem.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 07-Stream-Project
+# Stream API - Mini Project
 
-Write your notes, explanation, examples, and practice questions here.
+Analyzes a list of employees with a full Stream pipeline: filtering, grouping, and aggregating.
+
+See **`StreamProject.java`** in this folder for a complete, runnable example with explanatory comments.

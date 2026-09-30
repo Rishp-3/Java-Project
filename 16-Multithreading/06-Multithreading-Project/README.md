@@ -1,3 +1,5 @@
-# 06-Multithreading-Project
+# Multithreading - Mini Project
 
-Write your notes, explanation, examples, and practice questions here.
+Simulates multiple bank tellers safely depositing into one shared account concurrently.
+
+See **`MultithreadingProject.java`** in this folder for a complete, runnable example with explanatory comments.

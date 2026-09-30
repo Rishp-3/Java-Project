@@ -1,3 +1,5 @@
-# 01-JDBC-Basics
+# JDBC Basics
 
-Write your notes, explanation, examples, and practice questions here.
+The fundamentals of Java Database Connectivity: loading a driver, opening a Connection, and running a query.
+
+See **`JdbcBasics.java`** in this folder for a complete, runnable example with explanatory comments.

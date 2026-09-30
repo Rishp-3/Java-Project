@@ -1,3 +1,5 @@
-# 02-Arrays
+# DSA: Arrays
 
-Write your notes, explanation, examples, and practice questions here.
+Array-based algorithm problems: rotating an array, Kadane's maximum subarray sum, and moving zeros to the end.
+
+See **`ArraysDemo.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 01-try-catch
+# Try-Catch
 
-Write your notes, explanation, examples, and practice questions here.
+The basic mechanism for handling exceptions: risky code goes in `try`, and the handling logic goes in `catch`.
+
+See **`TryCatchDemo.java`** in this folder for a complete, runnable example with explanatory comments.

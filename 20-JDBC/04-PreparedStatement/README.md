@@ -1,3 +1,5 @@
-# 04-PreparedStatement
+# PreparedStatement
 
-Write your notes, explanation, examples, and practice questions here.
+Precompiled SQL with placeholders — safer (prevents SQL injection) and faster than plain `Statement`.
+
+See **`PreparedStatementDemo.java`** in this folder for a complete, runnable example with explanatory comments.

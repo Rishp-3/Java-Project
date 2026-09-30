@@ -1,3 +1,5 @@
-# 04-throw
+# Throw Keyword
 
-Write your notes, explanation, examples, and practice questions here.
+Manually raising an exception when a business rule is violated, using the `throw` statement.
+
+See **`ThrowDemo.java`** in this folder for a complete, runnable example with explanatory comments.

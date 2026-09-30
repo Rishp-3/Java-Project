@@ -1,3 +1,5 @@
-# 03-Strings
+# DSA: Strings
 
-Write your notes, explanation, examples, and practice questions here.
+String algorithm problems: first non-repeating character, anagram checking, and longest substring without repeats.
+
+See **`StringsDemo.java`** in this folder for a complete, runnable example with explanatory comments.

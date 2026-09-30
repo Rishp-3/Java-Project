@@ -1,3 +1,5 @@
-# 06-JDBC-Project
+# JDBC - Mini Project
 
-Write your notes, explanation, examples, and practice questions here.
+A Student record management console app using JDBC and the DAO (Data Access Object) pattern.
+
+See **`JdbcProject.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 04-LinkedList
+# DSA: Linked List
 
-Write your notes, explanation, examples, and practice questions here.
+A hand-built singly linked list with reversal and Floyd's cycle detection algorithm.
+
+See **`LinkedListDSA.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 09-E-Commerce-Console-Application
+# Project: E-Commerce Console App
 
-Write your notes, explanation, examples, and practice questions here.
+Browse a product catalog, add items to a cart, and check out.
+
+See **`ECommerceConsoleApplication.java`** in this folder for a complete, runnable example with explanatory comments.

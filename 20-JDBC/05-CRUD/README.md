@@ -1,3 +1,5 @@
-# 05-CRUD
+# CRUD Operations
 
-Write your notes, explanation, examples, and practice questions here.
+The four basic database operations — Create, Read, Update, Delete — implemented with JDBC.
+
+See **`CrudDemo.java`** in this folder for a complete, runnable example with explanatory comments.

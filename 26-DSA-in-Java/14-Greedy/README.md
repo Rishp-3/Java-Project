@@ -1,3 +1,5 @@
-# 14-Greedy
+# DSA: Greedy Algorithms
 
-Write your notes, explanation, examples, and practice questions here.
+Making the locally optimal choice at each step: activity selection, coin change, and fractional knapsack.
+
+See **`GreedyDemo.java`** in this folder for a complete, runnable example with explanatory comments.

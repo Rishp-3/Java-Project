@@ -1,3 +1,5 @@
-# 03-Thread-Methods
+# Thread Methods
 
-Write your notes, explanation, examples, and practice questions here.
+Useful `Thread` methods: `sleep()`, `join()`, `setPriority()`, `isAlive()`, and daemon threads.
+
+See **`ThreadMethodsDemo.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 03-Bank-Management-System
+# Project: Bank Management System
 
-Write your notes, explanation, examples, and practice questions here.
+Open accounts, deposit, withdraw, transfer between accounts, and view transaction history.
+
+See **`BankManagementSystem.java`** in this folder for a complete, runnable example with explanatory comments.

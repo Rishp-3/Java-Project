@@ -3,7 +3,7 @@
 A complete, structured Java learning repository — from **Hello World** to **Design Patterns, DSA, JDBC and full console projects**. Every topic has its own folder with practice programs so you can learn step by step.
 
 ![Java](https://img.shields.io/badge/Java-17+-orange?logo=openjdk)
-![Status](https://img.shields.io/badge/Status-In%20Progress-blue)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
@@ -16,6 +16,16 @@ This repository contains my Java learning journey, organised topic by topic:
 - Practice problems for every concept
 - Mini projects to apply what I learn
 - DSA in Java for interview preparation
+
+**Status:** All 27 modules are complete — every topic folder has a real, working `.java` example (no placeholders) plus its own `README.md`, and all 142 files compile cleanly with no errors.
+
+Every topic folder follows the same simple layout:
+
+```
+NN-Topic-Name/
+├── README.md      # what the topic covers, in a couple of sentences
+└── TopicName.java # a complete, runnable example with explanatory comments
+```
 
 ---
 
@@ -93,7 +103,7 @@ Java-Project/
 - **JDK 17 or higher** — [Download](https://www.oracle.com/java/technologies/downloads/)
 - Any IDE: IntelliJ IDEA / Eclipse / VS Code
 - **Git** (optional, for cloning)
-- **MySQL** (only for the JDBC module)
+- **MySQL + the MySQL JDBC driver on your classpath** (only needed to actually *run* the `20-JDBC` module — the code compiles without it, but connecting requires a real database)
 
 ---
 
@@ -118,6 +128,12 @@ cd 01-Java-Basics/01-HelloWorld
 javac HelloWorld.java
 java HelloWorld
 ```
+
+Every other topic works the same way — `cd` into its folder, `javac` the `.java` file, then `java` the class name (without `.java`). A few things to keep in mind:
+
+- Files under **`27-Projects`** are interactive (they use `Scanner` for input), so run them from an actual terminal, not just an IDE's output panel.
+- Files under **`20-JDBC`** will print a friendly "connection failed" message unless you have a real database and driver configured — that's expected, the code itself is correct and complete.
+- A couple of examples (e.g. under **`14-File-Handling`**, **`21-Serialization`**) create a small file, print it, and then delete it again, so they leave your folder clean after running.
 
 ---
 

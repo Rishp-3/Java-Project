@@ -1,3 +1,5 @@
-# 05-File-Project
+# File Handling - Mini Project
 
-Write your notes, explanation, examples, and practice questions here.
+A simple note-taking app that saves and loads notes from a text file.
+
+See **`FileProject.java`** in this folder for a complete, runnable example with explanatory comments.

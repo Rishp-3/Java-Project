@@ -1,3 +1,5 @@
-# 01-Calculator
+# Project: Calculator
 
-Write your notes, explanation, examples, and practice questions here.
+A console calculator supporting addition, subtraction, multiplication, and division in a menu-driven loop.
+
+See **`Calculator.java`** in this folder for a complete, runnable example with explanatory comments.

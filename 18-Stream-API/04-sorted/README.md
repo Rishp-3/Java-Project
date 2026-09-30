@@ -1,3 +1,5 @@
-# 04-sorted
+# Stream sorted()
 
-Write your notes, explanation, examples, and practice questions here.
+Sorts a stream's elements, using natural ordering or a custom `Comparator`.
+
+See **`SortedDemo.java`** in this folder for a complete, runnable example with explanatory comments.

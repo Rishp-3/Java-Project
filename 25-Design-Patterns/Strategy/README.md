@@ -1,3 +1,5 @@
-# Strategy
+# Strategy Pattern
 
-Write your notes, explanation, examples, and practice questions here.
+Defines a family of interchangeable algorithms and lets the client pick one at runtime.
+
+See **`StrategyPatternDemo.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 07-Polymorphism/03-Real-World-Example
+# Polymorphism - Real World Example
 
-Write your notes, explanation, examples, and practice questions here.
+A practical example (a payment processing system) showing why polymorphism is useful in real applications.
+
+See **`PolymorphismRealWorld.java`** in this folder for a complete, runnable example with explanatory comments.

@@ -1,3 +1,5 @@
-# 02-Functional-Interface
+# Functional Interfaces
 
-Write your notes, explanation, examples, and practice questions here.
+The `@FunctionalInterface` annotation and Java's built-in functional interfaces (`Function`, `Predicate`, `Supplier`, `Consumer`).
+
+See **`FunctionalInterfaceDemo.java`** in this folder for a complete, runnable example with explanatory comments.

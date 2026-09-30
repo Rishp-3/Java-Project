@@ -1,3 +1,5 @@
-# 02-Student-Management-System
+# Project: Student Management System
 
-Write your notes, explanation, examples, and practice questions here.
+Add, view, update, delete, and search student records using an in-memory list.
+
+See **`StudentManagementSystem.java`** in this folder for a complete, runnable example with explanatory comments.

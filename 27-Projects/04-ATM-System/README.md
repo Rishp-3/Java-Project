@@ -1,3 +1,5 @@
-# 04-ATM-System
+# Project: ATM System
 
-Write your notes, explanation, examples, and practice questions here.
+Simulates a real ATM: PIN authentication with limited attempts, balance check, deposit, and withdrawal.
+
+See **`AtmSystem.java`** in this folder for a complete, runnable example with explanatory comments.

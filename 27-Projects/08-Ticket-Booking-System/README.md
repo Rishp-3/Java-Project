@@ -1,3 +1,5 @@
-# 08-Ticket-Booking-System
+# Project: Ticket Booking System
 
-Write your notes, explanation, examples, and practice questions here.
+View a seat layout, book a seat, and cancel an existing booking.
+
+See **`TicketBookingSystem.java`** in this folder for a complete, runnable example with explanatory comments.

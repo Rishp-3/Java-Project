@@ -1,3 +1,5 @@
-# 13-Graph
+# DSA: Graph
 
-Write your notes, explanation, examples, and practice questions here.
+Graph representation with an adjacency list, plus BFS and DFS traversal algorithms.
+
+See **`GraphDemo.java`** in this folder for a complete, runnable example with explanatory comments.

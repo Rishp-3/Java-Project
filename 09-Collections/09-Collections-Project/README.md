@@ -1,3 +1,5 @@
-# 09-Collections-Project
+# Collections - Mini Project
 
-Write your notes, explanation, examples, and practice questions here.
+A student gradebook that combines ArrayList, TreeMap, HashSet, and PriorityQueue together.
+
+See **`CollectionsProject.java`** in this folder for a complete, runnable example with explanatory comments.

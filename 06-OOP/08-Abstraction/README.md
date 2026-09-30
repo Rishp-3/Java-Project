@@ -1,3 +1,5 @@
-# 08-Abstraction
+# Abstraction
 
-Write your notes, explanation, examples, and practice questions here.
+Hiding implementation details and exposing only essential features, using abstract classes with abstract and concrete methods.
+
+See **`Abstraction.java`** in this folder for a complete, runnable example with explanatory comments.

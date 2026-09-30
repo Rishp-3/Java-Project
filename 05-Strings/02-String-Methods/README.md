@@ -1,3 +1,5 @@
-# 02-String-Methods
+# String Methods
 
-Write your notes, explanation, examples, and practice questions here.
+Common `String` methods: `length()`, `substring()`, `indexOf()`, `replace()`, `split()`, `trim()`, and more.
+
+See **`StringMethods.java`** in this folder for a complete, runnable example with explanatory comments.

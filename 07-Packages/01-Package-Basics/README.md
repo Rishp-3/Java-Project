@@ -1,3 +1,5 @@
-# 01-Package-Basics
+# Package Basics
 
-Write your notes, explanation, examples, and practice questions here.
+Packages group related classes together and help avoid naming conflicts, similar to folders for code.
+
+See **`PackageBasics.java`** in this folder for a complete, runnable example with explanatory comments.
