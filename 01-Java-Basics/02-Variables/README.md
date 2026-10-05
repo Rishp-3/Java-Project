@@ -1,36 +1,17 @@
 # Variables in Java
 
 ## 📌 Topic
-
-Variable Java me data/value ko temporarily store karne ke liye use hota hai.
-
-Example:
-
-```java
-int age = 20;
-```
-
-Yahan:
-- `int` → Data Type
-- `age` → Variable Name
-- `20` → Value
-
----
+Variable Java me data/value ko temporarily store karne ke liye use hota hai. Ye memory me ek named box ki tarah hota hai.
 
 ## 🎯 What You Will Learn
 
 - Variable kya hota hai
-- Variable declare kaise karte hain
-- Variable initialize kaise karte hain
-- Variable ko update kaise karte hain
-- Multiple variables kaise banate hain
+- Variable declare aur initialize kaise karte hain
 - Variable naming rules
-- `final` variable
-- Local variables ka basic concept
+- Variable ki value change (update) karna
+- `final` keyword se constant banana
 
----
-
-## 💻 Basic Example
+## 💻 Code
 
 ```java
 public class Variables {
@@ -42,7 +23,7 @@ public class Variables {
         boolean isStudent = true;
 
         System.out.println(name);
-        System.out.println(age);
+        System.out.println(age);    
         System.out.println(height);
         System.out.println(isStudent);
     }
@@ -51,125 +32,16 @@ public class Variables {
 
 ## 🧠 Explanation
 
-### 1. Variable Declaration
+### `int age = 20;`
+`int` = data type, `age` = variable ka naam, `20` = value. Ye ek hi line me declaration aur initialization hai.
 
-Variable ko declare karne ka syntax:
+### `String name = "Rishabh";`
+`String` text store karta hai. Text hamesha double quotes `" "` me likhte hain.
 
-```text
-dataType variableName;
-```
+### `System.out.println(age);`
+Variable ka naam likhne par uski value print hoti hai (quotes ke bina).
 
-Example:
-
-```java
-int age;
-```
-
----
-
-### 2. Variable Initialization
-
-Variable ko value dena initialization kehlata hai.
-
-```java
-int age = 20;
-```
-
----
-
-### 3. Variable Update
-
-Variable ki value baad me change kar sakte hain.
-
-```java
-int age = 20;
-
-age = 21;
-
-System.out.println(age);
-```
-
-Output:
-
-```text
-21
-```
-
----
-
-## 📦 Multiple Variables
-
-Ek hi program me multiple variables bana sakte hain:
-
-```java
-String name = "Rishabh";
-int age = 20;
-double marks = 85.5;
-char grade = 'A';
-boolean passed = true;
-```
-
----
-
-## 🔒 Final Variable
-
-Agar kisi variable ki value change nahi karni hai to `final` use kar sakte hain.
-
-```java
-final double PI = 3.14159;
-```
-
-Ab:
-
-```java
-PI = 4.5;
-```
-
-❌ Ye allowed nahi hai.
-
----
-
-## 📏 Variable Naming Rules
-
-### ✅ Valid
-
-```java
-int age;
-int studentAge;
-int student_age;
-int age2;
-```
-
-### ❌ Invalid
-
-```java
-int 2age;
-int student-age;
-int class;
-```
-
-### Important Rules
-
-- Variable name number se start nahi ho sakta.
-- Space allowed nahi hai.
-- Special characters generally allowed nahi hain, except `_` and `$`.
-- Java keywords ko variable name ke roop me use nahi kar sakte.
-- Java variable names case-sensitive hote hain.
-
-Example:
-
-```java
-int age = 20;
-int Age = 25;
-```
-
-`age` aur `Age` **different variables** hain.
-
----
-
-## 🖥️ Output
-
-Example program ka output:
+## ▶️ Output
 
 ```text
 Rishabh
@@ -178,57 +50,20 @@ Rishabh
 true
 ```
 
----
+## 🔑 Important Points
 
-## 📝 Practice Questions
+- Variable use karne se pehle declare karna zaroori hai.
+- Naam letter, `_` ya `$` se start ho sakta hai, number se nahi.
+- Java case-sensitive hai: `age` aur `Age` alag variables hain.
+- Value change nahi karni ho to `final int MAX = 100;` use karo.
 
-### Beginner
+## 📝 Practice
 
-1. Apna naam ek variable me store karo.
-2. Apni age ek variable me store karo.
-3. Apni height `double` me store karo.
-4. Apne naam, age aur city ko variables me store karke print karo.
+1. Apna naam, age, city aur percentage variables me store karke print karo.
+2. `age` ki value badal ke dobara print karo.
+3. `final` variable banao aur uski value change karne ki koshish karke error dekho.
+4. Ek hi line me 3 `int` variables declare karo: `int a = 1, b = 2, c = 3;`
 
-### Intermediate
+## 🚀 Challenge
 
-5. Ek `marks` variable banao aur uski value update karo.
-6. Do integer variables banao aur unka sum print karo.
-7. `final` variable create karke print karo.
-8. `age` aur `Age` variables bana kar difference observe karo.
-
-### Challenge
-
-Ek student ki following information variables me store karo:
-
-```text
-Name
-Age
-Roll Number
-Percentage
-Grade
-Is Passed
-```
-
-Aur output ko properly format karke print karo.
-
-Example:
-
-```text
-Name: Rishabh
-Age: 20
-Roll Number: 101
-Percentage: 85.5
-Grade: A
-Passed: true
-```
-
----
-
-## 🔑 Key Takeaways
-
-- Variable data/value store karta hai.
-- Har variable ka ek data type hota hai.
-- Variable ki value change ki ja sakti hai.
-- `final` variable ki value change nahi ki ja sakti.
-- Variable names Java ke naming rules follow karte hain.
-- Java variables case-sensitive hote hain.
+Do variables `a` aur `b` banao aur teesra variable (temp) use kiye bina unki values swap karo. Phir dono print karo.

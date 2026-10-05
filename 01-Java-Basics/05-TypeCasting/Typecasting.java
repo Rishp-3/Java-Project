@@ -1,4 +1,4 @@
-public class TypeCasting {
+public class Typecasting {
     public static void main(String[] args) {
 
         // Widening
