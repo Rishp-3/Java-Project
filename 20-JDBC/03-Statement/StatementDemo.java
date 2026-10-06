@@ -3,9 +3,9 @@ import java.sql.*;
 public class StatementDemo {
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String url = "jdbc:h2:mem:mydatabase;DB_CLOSE_DELAY=-1";
 
-        try (Connection conn = DriverManager.getConnection(url, "root", "password");
+        try (Connection conn = DriverManager.getConnection(url, "sa", "");
              Statement statement = conn.createStatement()) {
 
             // Statement executes plain SQL - simple but vulnerable to SQL injection
@@ -32,7 +32,7 @@ public class StatementDemo {
             System.out.println("Query returned a ResultSet: " + hasResultSet);
 
         } catch (SQLException e) {
-            System.out.println("Expected failure without a real DB connection: " + e.getMessage());
+            System.out.println("Database error: " + e.getMessage());
         }
     }
 }

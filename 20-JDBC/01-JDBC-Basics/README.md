@@ -17,9 +17,9 @@ import java.sql.*;
 
 public class JdbcBasics {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/college";
-        String user = "root";
-        String pass = "password";
+        String url = "jdbc:h2:mem:college;DB_CLOSE_DELAY=-1";
+        String user = "sa";
+        String pass = "";
 
         try (Connection con = DriverManager.getConnection(url, user, pass);
              Statement st = con.createStatement();
@@ -36,7 +36,7 @@ public class JdbcBasics {
 }
 ```
 
-> 💡 Note: JDBC ke liye ek database (jaise MySQL) aur uska JDBC driver (`mysql-connector-j.jar`) classpath me hona chahiye. Isliye yahan output sample hai, jo setup ke baad aisa dikhega.
+> 💡 Note: ab ye module H2 (embedded database) use karta hai, isliye koi alag database install nahi karna padta. Run karne ke liye H2 jar classpath me do: `java -cp .:h2.jar ClassName` (Windows par `;` use karo), ya project root se Maven use karo. MySQL chahiye to URL, user, password badlo aur `mysql-connector-j` add karo.
 
 ## 🧠 Explanation
 
@@ -62,10 +62,10 @@ try-with-resources se `Connection`, `Statement`, `ResultSet` automatically close
 
 ## 🔑 Important Points
 
-- JDBC URL format: `jdbc:mysql://host:port/database`.
+- JDBC URL format: `jdbc:h2:mem:name` (in-memory), `jdbc:h2:file:./data/name` (file par save hota hai) ya MySQL ke liye `jdbc:mysql://host:port/database`.
 - `rs.next()` agli row par jata hai, row hone par `true` deta hai.
 - Password code me hardcode mat karo (config file ya environment variable use karo).
-- Maven me dependency: `com.mysql:mysql-connector-j`.
+- Maven me dependency: `com.h2database:h2` (MySQL ke liye `com.mysql:mysql-connector-j`).
 
 ## 📝 Practice
 

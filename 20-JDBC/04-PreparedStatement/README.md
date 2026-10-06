@@ -17,9 +17,9 @@ import java.sql.*;
 
 public class PreparedStatementDemo {
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/college";
+        String url = "jdbc:h2:mem:college;DB_CLOSE_DELAY=-1";
 
-        try (Connection con = DriverManager.getConnection(url, "root", "password")) {
+        try (Connection con = DriverManager.getConnection(url, "sa", "")) {
 
             String insert = "INSERT INTO students(name, age) VALUES(?, ?)";
             try (PreparedStatement ps = con.prepareStatement(insert)) {
@@ -42,7 +42,7 @@ public class PreparedStatementDemo {
 }
 ```
 
-> 💡 Note: JDBC ke liye ek database (jaise MySQL) aur uska JDBC driver (`mysql-connector-j.jar`) classpath me hona chahiye. Isliye yahan output sample hai, jo setup ke baad aisa dikhega.
+> 💡 Note: ab ye module H2 (embedded database) use karta hai, isliye koi alag database install nahi karna padta. Run karne ke liye H2 jar classpath me do: `java -cp .:h2.jar ClassName` (Windows par `;` use karo), ya project root se Maven use karo. MySQL chahiye to URL, user, password badlo aur `mysql-connector-j` add karo.
 
 ## 🧠 Explanation
 

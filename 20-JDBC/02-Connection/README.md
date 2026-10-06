@@ -19,8 +19,8 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/college";
-    private static final String USER = "root";
+    private static final String URL = "jdbc:h2:mem:college;DB_CLOSE_DELAY=-1";
+    private static final String USER = "sa";
     private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() throws SQLException {
@@ -38,7 +38,7 @@ public class DBConnection {
 }
 ```
 
-> 💡 Note: JDBC ke liye ek database (jaise MySQL) aur uska JDBC driver (`mysql-connector-j.jar`) classpath me hona chahiye. Isliye yahan output sample hai, jo setup ke baad aisa dikhega.
+> 💡 Note: ab ye module H2 (embedded database) use karta hai, isliye koi alag database install nahi karna padta. Run karne ke liye H2 jar classpath me do: `java -cp .:h2.jar ClassName` (Windows par `;` use karo), ya project root se Maven use karo. MySQL chahiye to URL, user, password badlo aur `mysql-connector-j` add karo.
 
 ## 🧠 Explanation
 

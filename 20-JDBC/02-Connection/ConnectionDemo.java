@@ -5,9 +5,9 @@ import java.sql.SQLException;
 public class ConnectionDemo {
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
-        String user = "root";
-        String password = "password";
+        String url = "jdbc:h2:mem:mydatabase;DB_CLOSE_DELAY=-1";
+        String user = "sa";
+        String password = "";
 
         Connection connection = null;
         try {
@@ -24,7 +24,7 @@ public class ConnectionDemo {
             // connection.rollback(); // or undo all changes if something went wrong
 
         } catch (SQLException e) {
-            System.out.println("Connection failed (expected without a real DB): " + e.getMessage());
+            System.out.println("Connection failed: " + e.getMessage());
         } finally {
             // ALWAYS close the connection in a finally block if not using try-with-resources
             if (connection != null) {

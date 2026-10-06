@@ -57,9 +57,9 @@ public class JdbcProject {
     }
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String url = "jdbc:h2:mem:mydatabase;DB_CLOSE_DELAY=-1";
 
-        try (Connection conn = DriverManager.getConnection(url, "root", "password")) {
+        try (Connection conn = DriverManager.getConnection(url, "sa", "")) {
             StudentDao dao = new StudentDao(conn);
 
             dao.createTable();
@@ -70,7 +70,7 @@ public class JdbcProject {
             System.out.println("Student with id 1: " + dao.findById(1));
 
         } catch (SQLException e) {
-            System.out.println("Expected failure without a real DB connection: " + e.getMessage());
+            System.out.println("Database error: " + e.getMessage());
         }
     }
 }

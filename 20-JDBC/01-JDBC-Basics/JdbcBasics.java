@@ -4,15 +4,16 @@ import java.sql.*;
 // The 4 basic steps are always: 1) load driver (usually automatic now),
 // 2) get a Connection, 3) run a Statement/Query, 4) process results, 5) close resources.
 //
-// NOTE: running this requires a real database and its JDBC driver on the classpath
-// (e.g. mysql-connector-j for MySQL, or the built-in org.sqlite.JDBC for SQLite).
-// This file demonstrates the correct API usage; adjust the URL/credentials for your DB.
+// NOTE: this uses H2, an embedded in-memory database, so there is nothing to install.
+// Just put the H2 jar on the classpath: java -cp .:h2.jar JdbcBasics
+// (With Maven the dependency is already in pom.xml.) To use MySQL instead, change the URL,
+// user and password and add mysql-connector-j to the classpath.
 public class JdbcBasics {
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
-        String user = "root";
-        String password = "password";
+        String url = "jdbc:h2:mem:mydatabase;DB_CLOSE_DELAY=-1";
+        String user = "sa";
+        String password = "";
 
         // try-with-resources automatically closes the Connection when done
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
@@ -29,8 +30,7 @@ public class JdbcBasics {
             }
 
         } catch (SQLException e) {
-            System.out.println("Could not connect to the database (expected in this sandbox " +
-                "without a real DB/driver): " + e.getMessage());
+            System.out.println("Could not connect to the database (is the H2 jar on the classpath?): " + e.getMessage());
         }
     }
 }

@@ -3,9 +3,9 @@ import java.sql.*;
 // CRUD = Create, Read, Update, Delete - the four basic database operations.
 public class CrudDemo {
 
-    static final String URL = "jdbc:mysql://localhost:3306/mydatabase";
-    static final String USER = "root";
-    static final String PASSWORD = "password";
+    static final String URL = "jdbc:h2:mem:mydatabase;DB_CLOSE_DELAY=-1";
+    static final String USER = "sa";
+    static final String PASSWORD = "";
 
     static void create(Connection conn, int id, String name, int marks) throws SQLException {
         String sql = "INSERT INTO students (id, name, marks) VALUES (?, ?, ?)";
@@ -49,6 +49,10 @@ public class CrudDemo {
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
 
+            try (Statement ddl = conn.createStatement()) {
+                ddl.execute("CREATE TABLE IF NOT EXISTS students (id INT PRIMARY KEY, name VARCHAR(50), marks INT)");
+            }
+
             create(conn, 1, "Rishabh", 90);
             create(conn, 2, "Aman", 78);
 
@@ -62,7 +66,7 @@ public class CrudDemo {
             readAll(conn);
 
         } catch (SQLException e) {
-            System.out.println("Expected failure without a real DB connection: " + e.getMessage());
+            System.out.println("Database error: " + e.getMessage());
         }
     }
 }

@@ -17,7 +17,7 @@ This repository contains my Java learning journey, organised topic by topic:
 - Mini projects to apply what I learn
 - DSA in Java for interview preparation
 
-**Status:** All 27 modules are complete — every topic folder has a real, working `.java` example (no placeholders) plus its own `README.md`, and all 142 files compile cleanly with no errors.
+**Status:** All 27 modules are complete — every topic folder has a real, working `.java` example (no placeholders) plus its own `README.md`. All 163 example files are compiled on every push by GitHub Actions, and the `src/` tree adds **175 JUnit tests** covering practice problems for every module and two projects with real database persistence.
 
 Every topic folder follows the same simple layout:
 
@@ -104,7 +104,8 @@ Java-Project/
 - **JDK 17 or higher** — [Download](https://www.oracle.com/java/technologies/downloads/)
 - Any IDE: IntelliJ IDEA / Eclipse / VS Code
 - **Git** (optional, for cloning)
-- **MySQL + the MySQL JDBC driver on your classpath** (only needed to actually *run* the `20-JDBC` module — the code compiles without it, but connecting requires a real database)
+- **Maven 3.9+** (only for the practice problems, tests and persistent projects — the numbered module folders need nothing but the JDK)
+- **No database to install** — `20-JDBC` and the persistent projects use [H2](https://www.h2database.com), an embedded database that Maven downloads for you
 
 ---
 
@@ -133,8 +134,33 @@ java HelloWorld
 Every other topic works the same way — `cd` into its folder, `javac` the `.java` file, then `java` the class name (without `.java`). A few things to keep in mind:
 
 - Files under **`27-Projects`** are interactive (they use `Scanner` for input), so run them from an actual terminal, not just an IDE's output panel.
-- Files under **`20-JDBC`** will print a friendly "connection failed" message unless you have a real database and driver configured — that's expected, the code itself is correct and complete.
+- Files under **`20-JDBC`** now use an in-memory H2 database, so they really run — put the H2 jar on the classpath: `javac CrudDemo.java && java -cp .:h2.jar CrudDemo` (use `;` instead of `:` on Windows). Download `h2-*.jar` from Maven Central, or just copy it from `~/.m2` after your first `mvn compile`.
 - A couple of examples (e.g. under **`14-File-Handling`**, **`21-Serialization`**) create a small file, print it, and then delete it again, so they leave your folder clean after running.
+
+---
+
+## 🧪 Practice Problems, Tests and CI
+
+Besides the standalone examples, the repo is also a Maven project:
+
+```
+mvn test            # run all 175 tests
+mvn verify          # what CI runs
+scripts/compile-all.sh   # compile every NN-* example file (also run by CI)
+```
+
+- `src/main/java/practice/<module>/` holds several practice problems per module (modules 01–26), each with a matching JUnit 5 test in `src/test/java/`. See **[PRACTICE.md](PRACTICE.md)** for the full index.
+- Module 27 is covered by two **persistent** projects: `practice.projects.student` and `practice.projects.bank`. They store data in `./data/` (an H2 file database), so records survive restarts:
+
+```
+mvn -q compile exec:java -Dexec.mainClass=practice.projects.student.StudentApp
+mvn -q compile exec:java -Dexec.mainClass=practice.projects.bank.BankApp
+```
+
+  The bank uses JDBC transactions, so a failed transfer never leaves half an update behind.
+- `.github/workflows/build.yml` runs the tests on Java 17 and 21 and compiles every example file on each push and pull request.
+
+> Tip: try solving a problem yourself first — delete a method body in `src/main/java`, run `mvn test`, and let the failing tests guide you.
 
 ---
 

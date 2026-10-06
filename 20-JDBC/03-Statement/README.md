@@ -18,7 +18,7 @@ import java.sql.*;
 public class StatementDemo {
     public static void main(String[] args) throws SQLException {
         try (Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/college", "root", "password");
+                "jdbc:h2:mem:college;DB_CLOSE_DELAY=-1", "sa", "");
              Statement st = con.createStatement()) {
 
             int rows = st.executeUpdate("INSERT INTO students(name, age) VALUES('Rishabh', 20)");
@@ -34,7 +34,7 @@ public class StatementDemo {
 }
 ```
 
-> 💡 Note: JDBC ke liye ek database (jaise MySQL) aur uska JDBC driver (`mysql-connector-j.jar`) classpath me hona chahiye. Isliye yahan output sample hai, jo setup ke baad aisa dikhega.
+> 💡 Note: ab ye module H2 (embedded database) use karta hai, isliye koi alag database install nahi karna padta. Run karne ke liye H2 jar classpath me do: `java -cp .:h2.jar ClassName` (Windows par `;` use karo), ya project root se Maven use karo. MySQL chahiye to URL, user, password badlo aur `mysql-connector-j` add karo.
 
 ## 🧠 Explanation
 
