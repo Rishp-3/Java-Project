@@ -3,7 +3,9 @@
 A complete, structured Java learning repository — from **Hello World** to **Design Patterns, DSA, JDBC and full console projects**. Every topic has its own folder with practice programs so you can learn step by step.
 
 [![CI](https://github.com/Rishp-3/Java-Project/actions/workflows/build.yml/badge.svg)](https://github.com/Rishp-3/Java-Project/actions/workflows/build.yml)
-![Java](https://img.shields.io/badge/Java-17+-orange?logo=openjdk)
+![Java](https://img.shields.io/badge/Java-17%20%7C%2021-orange?logo=openjdk)
+![Tests](https://img.shields.io/badge/Tests-JUnit%205-25A162?logo=junit5)
+![Maven](https://img.shields.io/badge/Build-Maven-C71A36?logo=apachemaven)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -18,7 +20,7 @@ This repository contains my Java learning journey, organised topic by topic:
 - Mini projects to apply what I learn
 - DSA in Java for interview preparation
 
-**Status:** All 27 modules are complete — every topic folder has a real, working `.java` example (no placeholders) plus its own `README.md`. All 163 example files are compiled on every push by GitHub Actions, and the `src/` tree adds **175 JUnit tests** covering practice problems for every module and two projects with real database persistence.
+**Status:** All 27 modules are complete — every topic folder has a real, working `.java` example (no placeholders) plus its own `README.md`. Every example file is compiled on every push by GitHub Actions, and the `src/` tree adds a full **JUnit 5 test suite** covering practice problems for every module and two projects with real database persistence.
 
 Every topic folder follows the same simple layout:
 
@@ -145,7 +147,7 @@ Every other topic works the same way — `cd` into its folder, `javac` the `.jav
 Besides the standalone examples, the repo is also a Maven project:
 
 ```
-mvn test            # run all 175 tests
+mvn test            # run all tests
 mvn verify          # what CI runs
 scripts/compile-all.sh   # compile every NN-* example file (also run by CI)
 ```
@@ -161,6 +163,8 @@ mvn -q compile exec:java -Dexec.mainClass=practice.projects.bank.BankApp
   The bank uses JDBC transactions, so a failed transfer never leaves half an update behind.
 - `.github/workflows/build.yml` runs the tests on Java 17 and 21 and compiles every example file on each push and pull request.
 
+> **How the two parts fit together:** read the demo in a numbered folder (e.g. `09-Collections/`) to learn the topic, then practise the same module in `src/main/java/practice/` and let the tests tell you if you got it right.
+>
 > Tip: try solving a problem yourself first — delete a method body in `src/main/java`, run `mvn test`, and let the failing tests guide you.
 
 ---
@@ -192,7 +196,7 @@ Follow the folders in order (01 → 27) for the best experience:
 
 ## 🤝 Contributing
 
-Suggestions and improvements are welcome!
+Suggestions and improvements are welcome! Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** first. Found a bug or have an idea? [Open an issue](https://github.com/Rishp-3/Java-Project/issues/new/choose).
 
 1. Fork the repo
 2. Create a branch: `git checkout -b feature/your-feature`

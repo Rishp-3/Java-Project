@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Keep the GitHub Actions used in .github/workflows up to date.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  # Keep Maven dependencies (H2, JUnit) and plugins up to date.
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: monthly
