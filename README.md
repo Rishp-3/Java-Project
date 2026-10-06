@@ -2,6 +2,7 @@
 
 A complete, structured Java learning repository — from **Hello World** to **Design Patterns, DSA, JDBC and full console projects**. Every topic has its own folder with practice programs so you can learn step by step.
 
+[![CI](https://github.com/Rishp-3/Java-Project/actions/workflows/build.yml/badge.svg)](https://github.com/Rishp-3/Java-Project/actions/workflows/build.yml)
 ![Java](https://img.shields.io/badge/Java-17+-orange?logo=openjdk)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-green)

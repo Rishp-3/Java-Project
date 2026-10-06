@@ -1,15 +1,54 @@
-name: Java Build
+name: CI
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+
+# Cancel an older run of the same branch/PR when a newer commit arrives.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
-  compile:
+  # Runs every JUnit test in src/test (practice problems, DSA, JDBC/H2 projects).
+  test:
+    name: Maven tests (JDK ${{ matrix.java }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [ '17', '21' ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
 
+      - name: Set up JDK ${{ matrix.java }}
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+
+      - name: Run tests
+        run: mvn -B -ntp verify
+
+      - name: Upload test reports on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports-jdk${{ matrix.java }}
+          path: target/surefire-reports/
+
+  # Compiles every standalone example in the numbered module folders (01-... to 27-...).
+  compile-examples:
+    name: Compile standalone examples
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -20,35 +59,5 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Compile all Java files
-        shell: bash
-        run: |
-          set -u
-          fail=0
-          total=0
-          failed_dirs=""
-
-          # Compile each folder that contains .java files on its own,
-          # so same class names in different folders don't clash.
-          while IFS= read -r dir; do
-            total=$((total + 1))
-            out="$(mktemp -d)"
-            if javac -d "$out" -sourcepath "$dir" "$dir"/*.java 2> err.txt; then
-              echo "✅ $dir"
-            else
-              echo "::error title=Compile failed::$dir"
-              echo "❌ $dir"
-              cat err.txt
-              fail=$((fail + 1))
-              failed_dirs="$failed_dirs\n$dir"
-            fi
-            rm -rf "$out"
-          done < <(find . -name '*.java' -not -path './.git/*' -printf '%h\n' | sort -u)
-
-          echo ""
-          echo "Compiled $total folders, $fail failed."
-          if [ "$fail" -ne 0 ]; then
-            echo "Failed folders:"
-            printf "$failed_dirs\n"
-            exit 1
-          fi
+      - name: Compile all examples
+        run: bash scripts/compile-all.sh

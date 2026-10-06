@@ -30,7 +30,7 @@ Run everything with `mvn test`, or one module with `mvn test -Dtest='ArrayProble
 | 23 | Reflection | `reflection.ReflectionProblems` | list methods, create by name, constructor lookup, read/write private fields, invoke private methods |
 | 24 | Regex | `regex.RegexProblems` | email, numbers, hashtags, mobile number, password strength, masking, date reformat |
 | 25 | Design Patterns | `patterns.DesignPatterns` | Singleton (enum), Factory, Builder, Observer, Strategy |
-| 26 | DSA in Java | `dsa.DsaProblems` | Kadane, reverse list, cycle detection, level order, BST validation, height, BFS shortest path, coin change, LIS, permutations, merge sort |
+| 26 | DSA in Java | `dsa.DsaProblems`, `dsa.DsaClassics` | Kadane, reverse list, cycle detection, level order, BST validation, height, BFS shortest path, coin change, LIS, permutations, merge sort; plus two sum, product except self, stock profit, top-K frequent, merge intervals, valid parentheses, longest unique substring, merge sorted lists, BST LCA, number of islands, climbing stairs, edit distance, duplicates (with Big-O notes in [`26-DSA-in-Java/README.md`](26-DSA-in-Java/README.md)) |
 | 27 | Projects | `projects.student.*`, `projects.bank.*` | Student manager and Bank with H2 persistence, transactions and tests |
 
 ## Ideas for next steps
